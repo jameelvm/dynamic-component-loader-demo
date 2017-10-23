@@ -10,19 +10,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var MainApplicationComponent = (function () {
-    function MainApplicationComponent() {
+var DynamicComponentHostDirective = (function () {
+    function DynamicComponentHostDirective(viewContainerRef) {
+        this.viewContainerRef = viewContainerRef;
     }
-    MainApplicationComponent.prototype.ngOnInit = function () {
-    };
-    return MainApplicationComponent;
+    return DynamicComponentHostDirective;
 }());
-MainApplicationComponent = __decorate([
-    core_1.Component({
-        selector: 'main-appcontainer',
-        template: "\n    <div>\n      <home-component></home-component>\n    </div>\n  "
+DynamicComponentHostDirective = __decorate([
+    core_1.Directive({
+        selector: '[dynamiccomponent-host]',
     }),
-    __metadata("design:paramtypes", [])
-], MainApplicationComponent);
-exports.MainApplicationComponent = MainApplicationComponent;
-//# sourceMappingURL=Application.Component.js.map
+    __metadata("design:paramtypes", [core_1.ViewContainerRef])
+], DynamicComponentHostDirective);
+exports.DynamicComponentHostDirective = DynamicComponentHostDirective;
+//# sourceMappingURL=DynamicComponentHost.Directive.js.map

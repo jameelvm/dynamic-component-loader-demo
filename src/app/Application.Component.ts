@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'main-appcontainer',
   template: `
     <div>
-      <dashboard-host></dashboard-host>
+      <home-component></home-component>
     </div>
   `
 })

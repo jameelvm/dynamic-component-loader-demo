@@ -10,19 +10,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var MainApplicationComponent = (function () {
-    function MainApplicationComponent() {
+var HomeComponent = (function () {
+    function HomeComponent() {
+        this.var = true;
     }
-    MainApplicationComponent.prototype.ngOnInit = function () {
+    HomeComponent.prototype.ngOnInit = function () {
+        this.tiles = [
+            { templateName: "ImageTemplate1", componentName: "YourDynamicComponent", someText: "YourDynamicComponent Text" },
+            { templateName: "ImageTemplate3", componentName: "YourDynamicComponent", someText: "YourDynamicComponent Text" },
+            { templateName: "ImageTemplate4", componentName: "YourDynamicComponent", someText: "YourDynamicComponent Text" },
+            { templateName: "ImageTemplate5", componentName: "YourDynamicComponent", someText: "YourDynamicComponent Text" }
+        ];
     };
-    return MainApplicationComponent;
+    return HomeComponent;
 }());
-MainApplicationComponent = __decorate([
+HomeComponent = __decorate([
     core_1.Component({
-        selector: 'main-appcontainer',
-        template: "\n    <div>\n      <home-component></home-component>\n    </div>\n  "
+        selector: 'home-component',
+        templateUrl: 'app/home/HomeComponent.Template.html'
     }),
     __metadata("design:paramtypes", [])
-], MainApplicationComponent);
-exports.MainApplicationComponent = MainApplicationComponent;
-//# sourceMappingURL=Application.Component.js.map
+], HomeComponent);
+exports.HomeComponent = HomeComponent;
+//# sourceMappingURL=Home.Component.js.map

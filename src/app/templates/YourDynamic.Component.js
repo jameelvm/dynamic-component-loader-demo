@@ -10,19 +10,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var MainApplicationComponent = (function () {
-    function MainApplicationComponent() {
+var YourDynamicComponent = (function () {
+    function YourDynamicComponent() {
     }
-    MainApplicationComponent.prototype.ngOnInit = function () {
+    YourDynamicComponent.prototype.ngOnInit = function () {
     };
-    return MainApplicationComponent;
+    return YourDynamicComponent;
 }());
-MainApplicationComponent = __decorate([
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
+], YourDynamicComponent.prototype, "data", void 0);
+YourDynamicComponent = __decorate([
     core_1.Component({
-        selector: 'main-appcontainer',
-        template: "\n    <div>\n      <home-component></home-component>\n    </div>\n  "
+        selector: 'your-dynamiccomponent',
+        templateUrl: 'app/templates/YourDynamicComponent.html'
     }),
     __metadata("design:paramtypes", [])
-], MainApplicationComponent);
-exports.MainApplicationComponent = MainApplicationComponent;
-//# sourceMappingURL=Application.Component.js.map
+], YourDynamicComponent);
+exports.YourDynamicComponent = YourDynamicComponent;
+//# sourceMappingURL=YourDynamic.Component.js.map
